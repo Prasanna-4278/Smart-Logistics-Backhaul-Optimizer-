@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backhaul Optimizer</title>
+</head>
+<body>
+    <h1>🚚 Backhaul Optimizer</h1>
+
+    <input type="text" id="location" placeholder="Enter location (e.g. Hyderabad)">
+    <button onclick="optimize()">Optimize</button>
+
+    <pre id="result"></pre>
+
+    <script>
+        async function optimize() {
+            const location = document.getElementById("location").value;
+
+            const response = await fetch(`http://localhost:5678/webhook/db723154-df12-4611-a2f0-f7403b5b8c44?location=${location}`);
+            const data = await response.json();
+
+            document.getElementById("result").innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>
