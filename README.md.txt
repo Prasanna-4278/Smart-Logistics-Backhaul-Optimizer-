@@ -30,6 +30,18 @@ setx OPENAI_API_KEY "your_api_key"
 uvicorn main:app --reload
 n8n
 
+Architecture:
+User → Frontend → n8n Webhook → FastAPI → AI → Response
+
+
+Conclusion:
+This project successfully addresses the empty backhaul problem in logistics.
+It improves truck utilization by matching delivery and return loads.
+Automation using n8n reduces manual effort and delays.
+Integration of APIs and AI provides smart and scalable solutions.
+The system demonstrates how technology can reduce costs and fuel usage.
+It can be extended into a real-world logistics platform.
+
 
 References:
 FastAPI Docs
